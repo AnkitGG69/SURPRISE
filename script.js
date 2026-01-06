@@ -13,18 +13,24 @@ setTimeout(() => {
 
 tapText.addEventListener("click", () => {
   tapText.style.display = "none";
+
   message.style.display = "block";
+  message.classList.add("fade-in");
+
 
 setTimeout(() => {
   hint.style.display = "block";
-}, 3000);
+  hint.classList.add("fade-in");
+},3000);
 });
-
 
 hint.addEventListener("click", () => {
   message.style.display = "none";
   hint.style.display = "none";
+
   cake.style.display = "block";
+  cake.classList.add("fade-in");
+
   document.getElementById("cakeHint").style.display = "block";
 });
 
@@ -36,6 +42,6 @@ cake.addEventListener("click", () => {
   document.getElementById("cakeHint").style.display = "none";	
   setTimeout(() => {
     endText.style.display = "block";
-  }, 2000);
-  
+    endText.classList.add("fade-in");
+},2000);
 });
